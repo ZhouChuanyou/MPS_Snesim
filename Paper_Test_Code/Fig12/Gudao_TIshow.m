@@ -21,4 +21,4 @@ colorbar('peer',axes1,'Ticks',[0.5 1.5],'fontsize',14,'position',...
 set(gcf,'position',[2459,378,741,420]);
 
 % Fig. 12. Training image 
-export_fig Gudao_TI.bmp -m2.5
+export_fig Gudao_TI.jpg -m2.5

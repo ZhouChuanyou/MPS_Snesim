@@ -39,4 +39,4 @@ for i=1.5:1:5.5
 end
 
 % Fig. 16. CCL operation
-export_fig CCL.bmp -m2.5
+export_fig CCL.jpg -m2.5

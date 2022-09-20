@@ -137,11 +137,11 @@ function [A, vA, vB, bb_rel] = crop_borders(A, bcol, padding, crop_amounts)
         % Place the original image in the empty image
         B(vB(1):vB(2), vB(3):vB(4), :, :) = A(vA(1):vA(2), vA(3):vA(4), :, :);
         % A = B; % 2022.9.18
-        A = A(vA(1)-10:vA(2)+10, vA(3)-10:vA(4)+10, :, :);
+        A=A(vA(1)-10:min(vA(2)+10,vA(2)),vA(3)-10:min(vA(4)+10,vA(4)),:,:);
     else  % extra cropping
         vA = [t-padding b+padding l-padding r+padding];
         % A = A(vA(1):vA(2), vA(3):vA(4), :, :);  % 2022.9.18
-        A = A(vA(1)-10:vA(2)+10, vA(3)-10:vA(4)+10, :, :);        
+        A=A(vA(1)-10:min(vA(2)+10,vA(2)),vA(3)-10:min(vA(4)+10,vA(4)),:,:);        
         vB = [NaN NaN NaN NaN];
     end
 

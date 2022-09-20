@@ -155,7 +155,7 @@ text(-0.32544963638763,-6.788298833951,...
     'FontSize',13);
 
 % Fig. 17. Frequency of CCL for theoretical and practical tests
-export_fig FrequencyCCL.png -m2.5
+export_fig FrequencyCCL.jpg -m2.5
 
 
 %% Fig. 19. CDF of A/N for unconditional simulation realizations
@@ -208,4 +208,4 @@ legend([leg1,leg2],{'multiple search trees','original Snesim'},...
     'fontsize',11,'position',[0.542,0.737676190476191,0.3554,0.1107]);
 
 % Fig. 19. CDF of A/N for unconditional simulation realizations
-export_fig CDF.png -m2.5
+export_fig CDF.jpg -m2.5

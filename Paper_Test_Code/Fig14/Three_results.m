@@ -207,4 +207,4 @@ annotation(gcf,'textbox',...
     'EdgeColor','none');
 
 % Fig. 14. Practical simulation realizations in Gudao Oilfield
-export_fig Gudao_simulation_three.png -m2.5
+export_fig Gudao_simulation_three.jpg -m2.5

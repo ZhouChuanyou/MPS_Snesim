@@ -181,4 +181,4 @@ annotation(gcf,'textbox',...
     'EdgeColor','none');
 
 % Fig. 10. Unconditional simulation realizations 
-export_fig non-conditional_simulation.png -m2.5
+export_fig non-conditional_simulation.jpg -m2.5

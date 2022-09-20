@@ -85,4 +85,4 @@ ylabel('Frequency of nodes','fontsize',12);
 sub2h.Position = [0.13,0.18814601932249,0.775,0.341162790697675];
 
 % Fig. 15. Frequency of nodes distribution after double retrieving
-export_fig Frequency.png -m2.5
+export_fig Frequency.jpg -m2.5

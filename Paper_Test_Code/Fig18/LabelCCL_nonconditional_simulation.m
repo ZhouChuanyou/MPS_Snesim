@@ -136,4 +136,4 @@ annotation(gcf,'textbox',...
     'EdgeColor','none');
 
 % Fig. 18. Distinct sand-filled channels of unconditional simulation realizations using CCL
-export_fig non-conditional_simulation_CCL.png -m2.5
+export_fig non-conditional_simulation_CCL.jpg -m2.5

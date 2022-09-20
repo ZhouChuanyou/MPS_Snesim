@@ -145,4 +145,4 @@ annotation(gcf,'textbox',...
     'EdgeColor','none');
 
 % Fig. 11. Hard data and conditional simulation realizations
-export_fig conditional_simulation.png -m2.5
+export_fig conditional_simulation.jpg -m2.5
