@@ -10,7 +10,7 @@ input_im=[0 0 0 0 0 1;
     0 1 1 1 0 0;
     0 0 0 0 0 0];
 
-[output_im,~] = bwlabel(input_im);
+[output_im,~] = CCL(input_im);
 ColorMatrix=[0,139,0;255,255,0];
 subplot(1,2,1);
 vislabels2(input_im,ColorMatrix)

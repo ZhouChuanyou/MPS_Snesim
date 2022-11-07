@@ -5,9 +5,9 @@ addpath('../../export_fig-master');
 addpath('../../relycode');
 load('Theory_MultiTree_Snesim_nonconditon.mat');
 % multiple search trees realization CCL 
-[newlabel1,num1] = bwlabel(Theory_MultiTree_Snesim_nonconditon{1}{1});
+[newlabel1,num1] = CCL(Theory_MultiTree_Snesim_nonconditon{1}{1},0);
 % original Snesim realizationB CCL
-[newlabel2,num2] = bwlabel(Theory_MultiTree_Snesim_nonconditon{1}{2});
+[newlabel2,num2] = CCL(Theory_MultiTree_Snesim_nonconditon{1}{2},0);
 
 figure(1);
 % Set color mapping matrix

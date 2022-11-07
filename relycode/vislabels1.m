@@ -44,6 +44,9 @@ s = regionprops(L, 'Extrema');
 hold(axesHandle, 'on');
 for k = 1:numel(s)
    e = s(k).Extrema;
+   if k==10 && numel(s)>10  % This is just for channel '10' in subplot2 
+       e(end-1,2) = e(end-1,2)-1; % because mark '10' will hide the sand
+   end
    text(e(end-1,1), e(end-1,2)-1, sprintf('%d', k), ...
       'Parent', axesHandle, ...
       'Clipping', 'on', ...
