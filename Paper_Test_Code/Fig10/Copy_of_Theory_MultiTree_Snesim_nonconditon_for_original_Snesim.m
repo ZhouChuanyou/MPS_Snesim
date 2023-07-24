@@ -32,7 +32,7 @@ global num2;
 num2(4) = 0;
 
 % Multiple search tree and original Snesim comparision
-Cal = {'MultiTree','OneTree'};
+Cal = {'OneTree','MultiTree'};
 % Setting the size of work area
 SIMT = {60};
 

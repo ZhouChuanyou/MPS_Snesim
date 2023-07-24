@@ -1,4 +1,3 @@
-Figure 9-19 could be shown just by clicking to run the program.
+Figure 9-22 can be displayed by simply executing the program.
 
-My computer has double screens, so some figures may display on the sub screen. 
-If your computer is with single screen, you could reset the gcf  position for the figure out in the code.
+My computer has dual screens, so some figures may appear on the secondary screen. In case you have a single-screen computer, you can adjust the position of the figure by resetting the 'gcf' handle in the code.

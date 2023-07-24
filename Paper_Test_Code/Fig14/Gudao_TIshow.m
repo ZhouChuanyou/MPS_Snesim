@@ -1,4 +1,4 @@
-%% Fig. 9. Training image
+%% Fig. 12. Training image
 clear all;close all;clc
 addpath('../../export_fig-master');
 addpath('../../relycode');
@@ -7,9 +7,7 @@ figure;
 ColorMatrix=[0,139,0;255,255,0];
 
 % data = TI;  % Here must give the data with TI.
-TI=channels;
-TI=TI(1:2:end,1:2:end);
-data  = TI;
+load('Gudao_Ti.mat');
 % Calculate color matrix
 RGB_TI=TI2RGB(data,ColorMatrix);  
 
@@ -17,11 +15,10 @@ RGB_TI=TI2RGB(data,ColorMatrix);
 axes1=subplot(1,1,1);imshow(RGB_TI,ColorMatrix./255,'InitialMagnification','fit');
 axis on;
 axis xy;
-
-set(axes1,'Xlim',[0,125],'Ylim',[0,125],'Clim',[0 2]);
+set(axes1,'Xlim',[0,80],'Ylim',[0,80],'Clim',[0 2]);
 colorbar('peer',axes1,'Ticks',[0.5 1.5],'fontsize',14,'position',...
     [0.756,0.11,0.025,0.123],'TickLabels',{'background','channel'},'Visible','on');
 set(gcf,'position',[2459,378,741,420]);
 
-% Fig. 9. Training image
-export_fig TI.jpg -m4
+% Fig. 12. Training image 
+export_fig Gudao_TI.jpg -m2

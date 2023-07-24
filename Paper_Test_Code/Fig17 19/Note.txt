@@ -1,6 +1,0 @@
-9.9.2022
-
-Each .mat file contains random  100 pairs of realizations by multiple search trees and original Snesim, 
-the {:}{1}{1} is the realizition of multiple search trees; the {:}{1}{2} is the realizition of original Snesim.
-
-The realizations GSLIB format for assessing the simulation continuity by multiple search trees and original Snesim are also provided in the zip file 'simulation realizations'.

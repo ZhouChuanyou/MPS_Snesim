@@ -1,5 +1,0 @@
-9.9.2022
-
-The Conditioning data of Ng33 sublayer is a practical data in Oilfield, with some virtual well data added.
-
-The production data won't be public, please forgive. But I have sort the facies data of GSLIB format "Ng33 -GSLIB.txt", which is enough for understanding Fig. 13.
