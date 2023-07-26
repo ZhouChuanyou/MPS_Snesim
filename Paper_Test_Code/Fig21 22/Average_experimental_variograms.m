@@ -119,13 +119,13 @@ set(gca,'Box','on');
 subplot(3,4,5);
 % ax = axes;
 % ax(1).Box='on';
-load('Theory_con_1000simulation.mat');
+load('Theory_con_600simulation.mat');
 celln = size(Theory_uncon_600simulation,2);
-lagl = size(Theory_con_1000simulation{1}{1}{1},2)-1;
+lagl = size(Theory_con_600simulation{1}{1}{1},2)-1;
 REy = NaN(celln,lagl);REyS = NaN(celln,lagl);
 % m_x
 for i = 1:celln
-    RE = Theory_con_1000simulation{i}{1}{1};
+    RE = Theory_con_600simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -150,7 +150,7 @@ set(gca,'Box','on');
 % m_y
 subplot(3,4,6);
 for i = 1:celln
-    RE = Theory_con_1000simulation{i}{1}{1};
+    RE = Theory_con_600simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -175,7 +175,7 @@ set(gca,'Box','on');
 % s_x
 subplot(3,4,7);
 for i = 1:celln
-    RE = Theory_con_1000simulation{i}{1}{2};
+    RE = Theory_con_600simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -200,7 +200,7 @@ set(gca,'Box','on');
 % s_y
 subplot(3,4,8);
 for i = 1:celln
-    RE = Theory_con_1000simulation{i}{1}{2};
+    RE = Theory_con_600simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -229,13 +229,13 @@ subplot(3,4,9);
 % ax(1).Box='on';
 TI = load('Gudao_Ti.mat');
 TI = TI.data;
-load('Gudao_1000simulation.mat');
+load('Gudao_600simulation.mat');
 celln = size(Theory_uncon_600simulation,2);
 lagl = size(TI,2)-1;
 REy = NaN(celln,lagl);REyS = NaN(celln,lagl);
 % m_x
 for i = 1:celln
-    RE = Gudao_1000simulation{i}{1}{1};
+    RE = Gudao_600simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -260,7 +260,7 @@ set(gca,'Box','on');
 % m_y
 subplot(3,4,10);
 for i = 1:celln
-    RE = Gudao_1000simulation{i}{1}{1};
+    RE = Gudao_600simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -285,7 +285,7 @@ set(gca,'Box','on');
 % s_x
 subplot(3,4,11);
 for i = 1:celln
-    RE = Gudao_1000simulation{i}{1}{2};
+    RE = Gudao_600simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -310,7 +310,7 @@ set(gca,'Box','on');
 % s_y
 subplot(3,4,12);
 for i = 1:celln
-    RE = Gudao_1000simulation{i}{1}{2};
+    RE = Gudao_600simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');

@@ -5,13 +5,13 @@ dbstop if error
 addpath('../../export_fig-master');
 addpath('../../relycode');
 load('Theory_uncon_600simulation.mat');
-load('Theory_con_1000simulation.mat');
-load('Gudao_1000simulation.mat');
+load('Theory_con_600simulation.mat');
+load('Gudao_600simulation.mat');
 for i = 1:size(Theory_uncon_600simulation,2)
     for j = 1:2
         [label_img{1}{i}{j},num{1}{i}{j}]=CCL(Theory_uncon_600simulation{i}{1}{j},1);
-        [label_img{2}{i}{j},num{2}{i}{j}]=CCL(Theory_con_1000simulation{i}{1}{j},1);
-        [label_img{3}{i}{j},num{3}{i}{j}]=CCL(Gudao_1000simulation{i}{1}{j},3);        
+        [label_img{2}{i}{j},num{2}{i}{j}]=CCL(Theory_con_600simulation{i}{1}{j},1);
+        [label_img{3}{i}{j},num{3}{i}{j}]=CCL(Gudao_600simulation{i}{1}{j},3);        
     end
 end
 % Unconditional simulation
