@@ -119,13 +119,13 @@ set(gca,'Box','on');
 subplot(3,4,5);
 % ax = axes;
 % ax(1).Box='on';
-load('Theory_con_600simulation.mat');
+load('Theory_con_1000simulation.mat');
 celln = size(Theory_uncon_600simulation,2);
-lagl = size(Theory_con_600simulation{1}{1}{1},2)-1;
+lagl = size(Theory_con_1000simulation{1}{1}{1},2)-1;
 REy = NaN(celln,lagl);REyS = NaN(celln,lagl);
 % m_x
 for i = 1:celln
-    RE = Theory_con_600simulation{i}{1}{1};
+    RE = Theory_con_1000simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -150,7 +150,7 @@ set(gca,'Box','on');
 % m_y
 subplot(3,4,6);
 for i = 1:celln
-    RE = Theory_con_600simulation{i}{1}{1};
+    RE = Theory_con_1000simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -175,7 +175,7 @@ set(gca,'Box','on');
 % s_x
 subplot(3,4,7);
 for i = 1:celln
-    RE = Theory_con_600simulation{i}{1}{2};
+    RE = Theory_con_1000simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -200,7 +200,7 @@ set(gca,'Box','on');
 % s_y
 subplot(3,4,8);
 for i = 1:celln
-    RE = Theory_con_600simulation{i}{1}{2};
+    RE = Theory_con_1000simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -229,13 +229,13 @@ subplot(3,4,9);
 % ax(1).Box='on';
 TI = load('Gudao_Ti.mat');
 TI = TI.data;
-load('Gudao_600simulation.mat');
+load('Gudao_1000simulation.mat');
 celln = size(Theory_uncon_600simulation,2);
 lagl = size(TI,2)-1;
 REy = NaN(celln,lagl);REyS = NaN(celln,lagl);
 % m_x
 for i = 1:celln
-    RE = Gudao_600simulation{i}{1}{1};
+    RE = Gudao_1000simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -260,7 +260,7 @@ set(gca,'Box','on');
 % m_y
 subplot(3,4,10);
 for i = 1:celln
-    RE = Gudao_600simulation{i}{1}{1};
+    RE = Gudao_1000simulation{i}{1}{1};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -285,7 +285,7 @@ set(gca,'Box','on');
 % s_x
 subplot(3,4,11);
 for i = 1:celln
-    RE = Gudao_600simulation{i}{1}{2};
+    RE = Gudao_1000simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'x',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -310,7 +310,7 @@ set(gca,'Box','on');
 % s_y
 subplot(3,4,12);
 for i = 1:celln
-    RE = Gudao_600simulation{i}{1}{2};
+    RE = Gudao_1000simulation{i}{1}{2};
     % RE = geoeas2matlab(RE,[80 80]);
     [REy(i,:),REx,~] = VariogramNew2(RE,'y',lagl);
     REyS(i,:) = smooth(REx,REy(i,:),0.2,'loess');
@@ -454,5 +454,51 @@ text(1.912,0.28,'vi','FontSize',13);
 set(gca,'Box','on');
 legend({'TI','Multiple search trees','Original Snesim'},'Box','on',...
     'fontsize',11,'Position',[0.6289,0.1250,0.09821,0.06288]);
+
+% Creating axes
+axes7 = axes('Parent',f,...
+    'Position',[0.3955,0.7718,0.0509,0.05071]);
+hold(axes7,'on');
+
+% Creating multiple rows using a matrix input in plot
+plot71 = plot(REx1,mREyS1,'LineWidth',1);
+plot72 = plot(REx3,mREyS3,'LineWidth',1);
+plot73 = plot(REx,REy,'LineWidth',1);
+
+set(plot71,'Marker','*','Color',[0 0 1]);
+set(plot72,'Marker','+','Color',[1 0 0]);
+set(plot73,'Marker','o','Color',[1 0 1]);
+xlim([8 12])
+ylim([0.185 0.202])
+
+box(axes7,'on');
+hold(axes7,'off');
+% Setting the attributes of the remaining coordinate areas
+set(axes7,'FontSize',12,'XMinorTick','on','YMinorTick','on');
+% Creating arrow
+annotation(f,'arrow',[0.280987394957983 0.394432773109244],...
+    [0.8899 0.82262996941896],'LineStyle','--');
+
+% Creating arrow
+annotation(f,'arrow',[0.281512605042017 0.395483193277311],...
+    [0.8601 0.770642201834863],'LineStyle','--');
+
+% Creating rectangle
+annotation(f,'rectangle',[0.267 0.86 0.015 0.03]);
+
+% Creating textbox
+annotation(f,'textbox',...
+    [0.315126050420168 0.816580961183378 0.0940126050420171 0.0354841997961264],...
+    'String','Scale 1:3.5',...
+    'LineStyle','none',...
+    'FontSize',12,...
+    'FitBoxToText','off');
+
+% Creating ylabel
+ylabel('\gamma_x','FontWeight','bold','FontSize',12,'Position',[6.8,0.195,-1]);
+
+% Creating xlabel
+xlabel('Distance','FontSize',11,'Position',[10,0.178,-1]);
+
 export_fig Average_experimental_variograms2.jpg -m1.2
 close(f);
