@@ -51,7 +51,7 @@ end
 toc;
 
 %% Plot simulation results
-figure;
+figure(10);
 % Define color mapping matrix
 ColorMatrix=[0,139,0;255,255,0];
 

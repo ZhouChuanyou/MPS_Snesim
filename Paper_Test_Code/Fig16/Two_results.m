@@ -2,7 +2,7 @@
 clear all;close all;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure;
+figure(16);
 set(gcf,'position', [1,41,1920,962]);
 [out, colnames, line1] = loadgeoeas('multiple search trees.out');
 data1 = geoeas2matlab(out,[99 94]);

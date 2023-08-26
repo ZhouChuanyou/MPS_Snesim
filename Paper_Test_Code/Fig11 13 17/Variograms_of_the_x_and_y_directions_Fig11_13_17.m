@@ -74,7 +74,7 @@ sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.272,'y direction','FontSize',13);
 export_fig Variogram_Unconditional.jpg -m2
-close(f);
+% close(f);
 
 %% Fig. 13. Variograms of the x and y directions in conditional simulation realizations
 clear;clc;
@@ -147,7 +147,7 @@ sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.272,'y direction','FontSize',13);
 export_fig Variogram_Conditional.jpg -m2
-close(f);
+% close(f);
 
 %% Fig. 17. Variograms of the x and y directions in practical simulation realizations of the Gudao Oilfield
 f = figure(17);
@@ -247,4 +247,4 @@ sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.328,'y direction','FontSize',13);
 export_fig Variogram_Gudao.jpg -m2
-close(f);
+% close(f);

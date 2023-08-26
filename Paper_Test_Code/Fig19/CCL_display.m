@@ -2,7 +2,7 @@
 clear all;close all;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure(1);
+figure(19);
 input_im=[0 0 0 0 0 1;
     0 0 0 0 0 1;
     0 1 0 0 0 1;

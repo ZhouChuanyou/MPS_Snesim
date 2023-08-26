@@ -2,7 +2,7 @@
 clear all;close all;clc
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure;
+figure(14);
 % Set color mapping matrix
 ColorMatrix=[0,139,0;255,255,0];
 

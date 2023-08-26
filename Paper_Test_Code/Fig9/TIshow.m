@@ -2,7 +2,7 @@
 clear all;close all;clc
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure;
+figure(9);
 % Set color mapping matrix
 ColorMatrix=[0,139,0;255,255,0];
 
@@ -24,4 +24,4 @@ colorbar('peer',axes1,'Ticks',[0.5 1.5],'fontsize',14,'position',...
 set(gcf,'position',[2459,378,741,420]);
 
 % Fig. 9. Training image
-export_fig TI.jpg -m4
+export_fig TI.jpg -m2

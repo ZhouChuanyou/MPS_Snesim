@@ -1,5 +1,5 @@
 %% Fig. 20. Frequency of CCL for theoretical and practical tests
-%%
+%% Statistics
 clear all;close all;clc;
 dbstop if error
 addpath('../../export_fig-master');
