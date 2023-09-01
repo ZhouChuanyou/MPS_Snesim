@@ -355,7 +355,7 @@ set(gca,'FontSize',13); % ax.FontSize = 11;
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_x','Fontsize',13,'FontWeight','bold');
-text(1.912,0.235,'i','FontSize',11,'fontweight','bold');
+text(1.912,0.235,'a','FontSize',11,'fontweight','bold');
 set(gca,'Box','on');
 
 %% Unconditional y
@@ -373,7 +373,7 @@ set(gca,'FontSize',13); % ax.FontSize = 11;
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_y','Fontsize',13,'FontWeight','bold');
-text(1.912,0.285,'ii','FontSize',13);
+text(1.912,0.285,'b','FontSize',13);
 set(gca,'Box','on');
 
 %% Conditional x
@@ -392,7 +392,7 @@ ylim([0,0.2656]);
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_x','Fontsize',13,'FontWeight','bold');
-text(1.912,0.25,'iii','FontSize',13);
+text(1.912,0.25,'c','FontSize',13);
 set(gca,'Box','on');
 
 %% Conditional y
@@ -411,7 +411,7 @@ set(gca,'FontSize',13); % ax.FontSize = 11;
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_y','Fontsize',13,'FontWeight','bold');
-text(1.912,0.285,'iv','FontSize',13);
+text(1.912,0.285,'d','FontSize',13);
 set(gca,'Box','on');
 
 %% Practical x
@@ -431,7 +431,7 @@ set(gca,'yTick',[0,0.05,0.1,0.15,0.2,0.25,0.3]);
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_x','Fontsize',13,'FontWeight','bold');
-text(1.912,0.28,'v','FontSize',13);
+text(1.912,0.28,'e','FontSize',13);
 set(gca,'Box','on');
 
 %% Practical y
@@ -450,7 +450,7 @@ set(gca,'yTick',[0,0.05,0.1,0.15,0.2,0.25,0.3]);
 set(gca,'xminortick','on');set(gca,'yminortick','on');
 xlabel('Distance','Fontsize',13);
 ylabel('\gamma_y','Fontsize',13,'FontWeight','bold');
-text(1.912,0.28,'vi','FontSize',13);
+text(1.912,0.28,'f','FontSize',13);
 set(gca,'Box','on');
 legend({'TI','Multiple search trees','Original Snesim'},'Box','on',...
     'fontsize',11,'Position',[0.6289,0.1250,0.09821,0.06288]);
