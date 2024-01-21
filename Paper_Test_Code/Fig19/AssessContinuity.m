@@ -1,4 +1,4 @@
-%% Fig. 20. Frequency of CCL for theoretical and practical tests
+%% Fig. 19. Frequency of CCL for theoretical and practical tests
 %% Statistics
 clear all;close all;clc;
 dbstop if error
@@ -95,7 +95,7 @@ Std4=sqrt(sum(((N4(:,1)-Mean4).^2).*(N4(:,3)./100)));
 Std5=sqrt(sum(((N5(:,1)-Mean5).^2).*(N5(:,3)./100)));
 Std6=sqrt(sum(((N6(:,1)-Mean6).^2).*(N6(:,3)./100)));
 
-figure(20)
+figure(19)
 % Unconditioanl
 sub1h = subplot(3,1,1);
 sub1h.Position = [0.13,0.77371377033142,0.775,0.215735294117647];
@@ -186,5 +186,6 @@ text(-0.668,-0.08,...
 
 legend([barh(1),barh(2)],...
     {'multiple search trees','original Snesim'},'fontsize',11);
-% Fig. 20. Frequency of CCL for theoretical and practical tests
+set(gcf, 'Color', 'white');
+% Fig. 19. Frequency of CCL for theoretical and practical tests
 export_fig FrequencyCCL.jpg -m2

@@ -1,4 +1,4 @@
-%% Fig. 18. Frequency of nodes distribution after double retrieving
+%% Fig. 17. Frequency of nodes distribution after double retrieving
 % MATLAB 2019b or later, for the object 'XEndPoints' of 'bar' at line 56.
 
 clear all;close all;clc;
@@ -36,8 +36,8 @@ for i = 1:4
 end
 bar(freq_Gudao,0.4)
 
-%% Fig. 18. Number of nodes distribution after double retrieving
-figure(18);
+%% Fig. 17. Number of nodes distribution after double retrieving
+figure(17);
 set(gcf,'position',[313,231,904,629]);
 sub1h = subplot(2,1,1);
 num_all = [num_uncondi;num_condi;num_Gudao];
@@ -63,7 +63,7 @@ legend(len,'Orientation','horizontal','fontsize',12,'position',...
     [0.138643073286188,0.874138845603619,0.433628312386243,0.039745626985932]);
 ylabel('Number of nodes','fontsize',12);
 
-%% Fig. 15. Frequency of nodes distribution after double retrieving
+%% Fig. 17. Frequency of nodes distribution after double retrieving
 sub2h = subplot(2,1,2);
 len = {'1 tree','2 trees','3 trees','4 trees'};
 cat = categorical({'(a) unconditional simulation','(b) conditional simulation',...
@@ -83,6 +83,6 @@ end
 xlabel('Tests of mutiple search trees','fontsize',13);
 ylabel('Frequency of nodes','fontsize',12);
 sub2h.Position = [0.13,0.18814601932249,0.775,0.341162790697675];
-
-% Fig. 18. Frequency of nodes distribution after double retrieving
+set(gcf, 'Color', 'white');
+% Fig. 17. Frequency of nodes distribution after double retrieving
 export_fig Frequency.jpg -m2

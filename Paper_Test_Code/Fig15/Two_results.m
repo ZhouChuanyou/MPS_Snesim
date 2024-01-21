@@ -1,8 +1,8 @@
-%% Fig. 16. Practical simulation realizations in Gudao Oilfield
+%% Fig. 15. Practical simulation realizations in Gudao Oilfield
 clear all;close all;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure(16);
+figure(15);
 set(gcf,'position', [1,41,1920,962]);
 [out, colnames, line1] = loadgeoeas('multiple search trees.out');
 data1 = geoeas2matlab(out,[99 94]);
@@ -203,6 +203,6 @@ annotation(gcf,'textbox',...
     'FontWeight','bold',...
     'FontSize',18,...
     'EdgeColor','none');
-
-% Fig. 16. Practical simulation realizations in Gudao Oilfield
+set(gcf, 'Color', 'white');
+% Fig. 15. Practical simulation realizations in Gudao Oilfield
 export_fig Gudao_simulation.jpg -m1.2

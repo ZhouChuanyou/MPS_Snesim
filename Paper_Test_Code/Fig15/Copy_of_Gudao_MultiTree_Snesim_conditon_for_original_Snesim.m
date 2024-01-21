@@ -99,6 +99,6 @@ set(axes1,'Xlim',[0,99],'Ylim',[0,94],'Clim',[0 2],'FontSize',13,...
     'position',[0.208355188831504,0.11,0.228866870190541,0.815]);
 set(axes2,'Xlim',[0,99],'Ylim',[0,94],'Clim',[0 2],'FontSize',13,...
     'position',[0.483775853678815,0.11,0.228866870190541,0.815]);
-
+set(gcf, 'Color', 'white');
 % Gudao_simulation.png
 export_fig Gudao_simulation.png -m2.5

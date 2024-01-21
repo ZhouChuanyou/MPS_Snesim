@@ -1,5 +1,5 @@
 %% Theory test, multiple trees and original Snesim, unconditional
-% Fig. 10. Unconditional simulation realizations 
+% Fig. 9. Unconditional simulation realizations 
 clear all;close all;clc
 tic;
 addpath('../../export_fig-master');
@@ -181,6 +181,6 @@ annotation(gcf,'textbox',...
     'FontWeight','bold',...
     'FontSize',18,...
     'EdgeColor','none');
-
-% Fig. 10. Unconditional simulation realizations 
+set(gcf, 'Color', 'white');
+% Fig. 9. Unconditional simulation realizations 
 export_fig non-conditional_simulation.jpg -m2

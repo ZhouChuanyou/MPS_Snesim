@@ -1,8 +1,8 @@
-%% Fig. 19. CCL operation
+%% Fig. 18. CCL operation
 clear all;close all;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-figure(19);
+figure(18);
 input_im=[0 0 0 0 0 1;
     0 0 0 0 0 1;
     0 1 0 0 0 1;
@@ -37,6 +37,6 @@ for i=1.5:1:5.5
     plot([i,i],[0.5,6.5],'color','b','linestyle',':','LineWidth',0.1);
     plot([0.5,6.5],[i,i],'color','b','linestyle',':','LineWidth',0.1);
 end
-
-% Fig. 19. CCL operation
+set(gcf, 'Color', 'white');
+% Fig. 18. CCL operation
 export_fig CCL.jpg -m2

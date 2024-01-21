@@ -1,9 +1,9 @@
 clear;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-%% Fig. 11. Variograms of the x and y directions in unconditional simulation realizations
+%% Fig. 10. Variograms of the x and y directions in unconditional simulation realizations
 clear;clc;
-f = figure(11);
+f = figure(10);
 f.Position = [318,195,1146,420];
 f.InnerPosition = [318,195,1146,420];
 
@@ -73,12 +73,13 @@ ylabel('\gamma_y','Fontsize',12,'FontWeight','bold');
 sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.272,'y direction','FontSize',13);
+set(gcf, 'Color', 'white'); 
 export_fig Variogram_Unconditional.jpg -m2
 % close(f);
 
-%% Fig. 13. Variograms of the x and y directions in conditional simulation realizations
+%% Fig. 12. Variograms of the x and y directions in conditional simulation realizations
 clear;clc;
-f = figure(13);
+f = figure(12);
 f.Position = [318,195,1146,420];
 f.InnerPosition = [318,195,1146,420];
 
@@ -146,11 +147,12 @@ ylabel('\gamma_y','Fontsize',12,'FontWeight','bold');
 sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.272,'y direction','FontSize',13);
+set(gcf, 'Color', 'white'); 
 export_fig Variogram_Conditional.jpg -m2
 % close(f);
 
-%% Fig. 17. Variograms of the x and y directions in practical simulation realizations of the Gudao Oilfield
-f = figure(17);
+%% Fig. 16. Variograms of the x and y directions in practical simulation realizations of the Gudao Oilfield
+f = figure(16);
 f.Position = [318,195,1146,420];
 f.InnerPosition = [318,195,1146,420];
 
@@ -246,5 +248,6 @@ ylabel('\gamma_y','Fontsize',12,'FontWeight','bold');
 sub2h.Position = [0.5546,0.1117,0.3346,0.8132];
 set(gca,'Box','on');
 text(2,0.328,'y direction','FontSize',13);
+set(gcf, 'Color', 'white'); 
 export_fig Variogram_Gudao.jpg -m2
 % close(f);

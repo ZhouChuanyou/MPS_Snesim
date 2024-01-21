@@ -1,7 +1,7 @@
 clear;clc;
 addpath('../../export_fig-master');
 addpath('../../relycode');
-f = figure(21);
+f = figure(20);
 % f.Position = [318,195,1146,420];
 % f.InnerPosition = [318,195,1146,420];
 % set(get(f, 'JavaFrame'), 'Maximized', true);
@@ -332,11 +332,12 @@ xlabel('Distance','Fontsize',13);
 ylabel('\gamma_y','Fontsize',13,'FontWeight','bold');
 text(1.912,0.380,'f2','FontSize',13);
 set(gca,'Box','on');
+set(gcf, 'Color', 'white');
 export_fig Average_experimental_variograms1.jpg -m1.2
 % close(f);
 
 %% TI with each other
-f = figure(22);
+f = figure(21);
 % set(get(f, 'JavaFrame'), 'Maximized', true);
 set(f,'units','normalized','outerposition',[0 0 1 1]);
 %% Unconditional x
@@ -497,6 +498,6 @@ ylabel('\gamma_x','FontWeight','bold','FontSize',12,'Position',[6.8,0.195,-1]);
 
 % Creating xlabel
 xlabel('Distance','FontSize',11,'Position',[10,0.178,-1]);
-
+set(gcf, 'Color', 'white');
 export_fig Average_experimental_variograms2.jpg -m1.2
 % close(f);

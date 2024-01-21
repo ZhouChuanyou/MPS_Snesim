@@ -71,7 +71,7 @@ end
 toc;
 
 %% Plot simulation results
-figure(12);
+figure(11);
 % Define color mapping matrix
 ColorMatrix=[0,139,0;255,255,0];
 ColorMatrixSIM=[0,139,0;255,255,0;255,255,255];
@@ -145,6 +145,6 @@ annotation(gcf,'textbox',...
     'FontWeight','bold',...
     'FontSize',18,...
     'EdgeColor','none');
-
-% Fig. 12. Hard data and conditional simulation realizations
+set(gcf, 'Color', 'white');
+% Fig. 11. Hard data and conditional simulation realizations
 export_fig conditional_simulation.jpg -m2
