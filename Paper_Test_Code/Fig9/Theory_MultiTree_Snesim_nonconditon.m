@@ -45,6 +45,7 @@ for i = 1:size(SIMT,2)
         % Simulate
         [out{i}{j},outresult{i}{j}]=mps_snesim(TI,SIM,options);
         outresult{i}{j}.out = out{i}{j};
+        % Statistic for the MST running time, the first element 2024.2.3
         elapsedTime(j) = toc;
     end  
 end

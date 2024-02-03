@@ -102,7 +102,7 @@ if options.debug_level>0
 end
 
 %% SET TEMPLATE
-global T; % 与主程序中的T变量?腿
+global T; % Consistent with the 'T' variable in the main program
 if ~isfield(options,'T')&&isempty(T);
     if ~isfield(options,'n_template');options.n_template=48;end;
     n_dim=ndims(SIM);
@@ -132,7 +132,10 @@ if ~isfield(options,'ST')&isempty(ST);
     t1=now;
     % 2021.4.8 rewrite
     % parfor t = 1:size(options.T,2)
-    for t = 1:size(options.T,2)
+    % 2024.2.3 parallel computation for multiple search trees, Search Trees
+    % creation!
+    % for t = 1:size(options.T,2)
+    parfor t = 1:size(options.T,2)
         % [options.ST{t}]=mps_tree_populate(TI.D,options.T{t});
         % [options.ST{t}];
         tt{t}=mps_tree_populate(TI.D,options.T{t});
@@ -202,7 +205,9 @@ for i=1:N_PATH; %  % START LOOOP OVER PATH
         % 2022.8.16
         % parfor t=1:size(options.T,2)
         % 2021.3.9 rewrite, use 'for' just once, and count the number of data events and non Nan condition data  
-        for t=1:size(options.T,2)
+        % 2024.2.3 for parallel computation
+        % for t=1:size(options.T,2)        
+        parfor t=1:size(options.T,2)
             [d_cond{t},n_cond{t}]=mps_cond_from_template(SIM.D,ix,iy,iz,options.T{t},options.n_cond);            
         end
         if options.debug_level>0
@@ -220,7 +225,9 @@ for i=1:N_PATH; %  % START LOOOP OVER PATH
 %         [c_pdfc{3},c{3},d_cond_use{3}] = mps_tree_get_cond(options.ST{3},d_cond{3});
 %         [c_pdfc{4},c{4},d_cond_use{4}] = mps_tree_get_cond(options.ST{4},d_cond{4});
         % parfor t=1:size(options.ST,2)
-        for t=1:size(options.ST,2)
+        % 2024.2.3 for parallel computation
+        % for t=1:size(options.ST,2)
+        parfor t=1:size(options.ST,2)
             [c_pdfc{t},c{t},d_cond_use{t}] = mps_tree_get_cond(options.ST{t},d_cond{t});
         end
         
