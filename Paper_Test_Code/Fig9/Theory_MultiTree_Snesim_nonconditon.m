@@ -1,6 +1,7 @@
 %% Theory test, multiple trees and original Snesim, unconditional
 % Fig. 9. Unconditional simulation realizations 
 clear all;close all;clc
+parpool('local', 4);
 tic;
 addpath('../../export_fig-master');
 addpath(genpath('../../mGstat'));
