@@ -207,8 +207,8 @@ for i=1:N_PATH; %  % START LOOOP OVER PATH
         % parfor t=1:size(options.T,2)
         % 2021.3.9 rewrite, use 'for' just once, and count the number of data events and non Nan condition data  
         % 2024.2.3 for parallel computation
-        % for t=1:size(options.T,2)        
-        parfor t=1:size(options.T,2)
+        for t=1:size(options.T,2)        
+        % parfor t=1:size(options.T,2)
             [d_cond{t},n_cond{t}]=mps_cond_from_template(SIM.D,ix,iy,iz,options.T{t},options.n_cond);            
         end
         if options.debug_level>0
@@ -227,8 +227,8 @@ for i=1:N_PATH; %  % START LOOOP OVER PATH
 %         [c_pdfc{4},c{4},d_cond_use{4}] = mps_tree_get_cond(options.ST{4},d_cond{4});
         % parfor t=1:size(options.ST,2)
         % 2024.2.3 for parallel computation
-        % for t=1:size(options.ST,2)
-        parfor t=1:size(options.ST,2)
+        for t=1:size(options.ST,2)
+        % parfor t=1:size(options.ST,2)
             [c_pdfc{t},c{t},d_cond_use{t}] = mps_tree_get_cond(options.ST{t},d_cond{t});
         end
         
