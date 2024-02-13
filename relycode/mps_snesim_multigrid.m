@@ -133,6 +133,29 @@ if ~isfield(options,'ST_mul')&&isempty(mST);
         end
     end
 end
+
+% parallel computing, search tree construction. 2024.2.13
+% if ~isfield(options,'ST_mul')&&isempty(mST);
+%     t_start=now;
+%     parfor i_grid=1:(options.n_mulgrids);
+%         for i_template=1:size(options.T{i_grid},2)
+%             % t_start=now;
+%             mgstat_verbose(sprintf('%s: Building tree for MultiGrid #%d d_cell=%d',mfilename,i_grid,d_cell(i_grid)),1);
+%             % 2021.3.14 modify
+%             % [options.ST_mul{i_grid}]=mps_tree_populate(TI.D,options.T{i_grid},d_cell(i_grid));
+%             % 2024.2.12
+%             % [options.ST_mul{i_grid}{i_template}]=mps_tree_populate(TI.D,options.T{i_grid}{i_template},d_cell(i_grid));
+%             tt{i_grid}{i_template}=mps_tree_populate(TI.D,options.T{i_grid}{i_template},d_cell(i_grid));
+%             % t_end=now;
+%             % mgstat_verbose(sprintf('%s: Build tree for MultiGrid #%d d_cell=%d in %5.2f s',mfilename,i_grid,d_cell(i_grid),(t_end-t_start)*(3600*24)),-1);
+%         end
+%     end
+%     options.ST_mul = tt; % tt: temporary variable
+%     t_end=now;
+%     mgstat_verbose(sprintf('Build tree for MultiGrid in %5.2f s',(t_end-t_start)*(3600*24)),-1);
+% end
+
+
 try
     mST = options.ST_mul;
 catch

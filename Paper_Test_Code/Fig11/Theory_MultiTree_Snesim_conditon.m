@@ -1,6 +1,7 @@
 %% Theory test, multiple trees and original Snesim, conditional
 % Fig. 11. Hard data and conditional simulation realizations
 clear all;close all;clc
+% parpool('local', 4);
 tic;
 addpath('../../export_fig-master');
 addpath(genpath('../../mGstat'));

@@ -1,5 +1,6 @@
 %% Gudao Oilfield test, multiple trees and original Snesim
 clear all;close all;clc
+% parpool('local', 4);
 tic; 
 addpath('../../export_fig-master');
 addpath(genpath('../../mGstat'));

@@ -134,12 +134,13 @@ if ~isfield(options,'ST')&isempty(ST);
     % parfor t = 1:size(options.T,2)
     % 2024.2.3 parallel computation for multiple search trees, Search Trees
     % creation!
-    % for t = 1:size(options.T,2)
-    parfor t = 1:size(options.T,2)
+    for t = 1:size(options.T,2)
+    % parfor t = 1:size(options.T,2)
         % [options.ST{t}]=mps_tree_populate(TI.D,options.T{t});
         % [options.ST{t}];
-        tt{t}=mps_tree_populate(TI.D,options.T{t});
+        tt{t}=mps_tree_populate(TI.D,options.T{t}); % tt: temporary variable
     end
+    % delete(gcp); % 2024.2.13 close the parallel computing 
     options.ST = tt;  % 2022.8.16    
     mgstat_verbose(sprintf('%s: end building search tree (%g s)',mfilename,(now-t1)*3600*24),-1)
 else
