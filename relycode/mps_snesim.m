@@ -129,7 +129,9 @@ end
 global ST;  % Consistent with the 'ST' variable in the main program
 if ~isfield(options,'ST')&isempty(ST);
     mgstat_verbose(sprintf('%s: start building search tree',mfilename),-1)
-    t1=now;
+    % 这个memory用起来得到的值，跳动很大。2024.2.25
+    % [userBefore, ~] = memory;
+    t1=now;    
     % 2021.4.8 rewrite
     % parfor t = 1:size(options.T,2)
     % 2024.2.3 parallel computation for multiple search trees, Search Trees
@@ -143,6 +145,18 @@ if ~isfield(options,'ST')&isempty(ST);
     % delete(gcp); % 2024.2.13 close the parallel computing 
     options.ST = tt;  % 2022.8.16    
     mgstat_verbose(sprintf('%s: end building search tree (%g s)',mfilename,(now-t1)*3600*24),-1)
+    % 这个memory用起来得到的值，跳动很大。2024.2.25
+    % [userAfter, ~] = memory;
+    % memoryUsed = userAfter.MemUsedMATLAB - userBefore.MemUsedMATLAB;
+    % memoryUsed = memoryUsed/(1024.^2);
+    %
+    % 这个只是变量的内存大小。 2024.2.25
+    % varInfo = whos('tt'); % 获取变量的信息
+    % varMemoryBytes = varInfo.bytes; % 以字节为单位的内存大小
+    % varMemoryMB = varMemoryBytes / (2^20); % 转换为MB
+    % disp(['Variable memory usage: ', num2str(varMemoryMB), ' MB']); % 显示内存占用
+
+    % delete(gcp); % 2024.2.13
 else
     mgstat_verbose(sprintf('%s: using supplied search tree',mfilename),1)
 end
